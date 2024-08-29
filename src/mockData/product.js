@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     productName: "Alpha Widget",
     productPrice: 19.99,

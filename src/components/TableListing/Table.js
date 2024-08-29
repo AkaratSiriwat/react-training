@@ -23,27 +23,28 @@
  * }} props
  * @returns
  */
-function Table({ dataSource = [], ...props }) {
+function Table({ columns = [], data = [], ...props }) {
+  console.log("data:", data);
+  console.log("columns:", columns);
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th></th>
-            <th></th>
+    <table>
+      <thead>
+        <tr>
+          {columns.map((column, index) => (
+            <th key={index}>{column.title}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((row, rowIndex) => (
+          <tr key={rowIndex}>
+            {columns.map((column, colIndex) => (
+              <td key={colIndex}>{row[column.dataIndex]}</td>
+            ))}
           </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        ))}
+      </tbody>
+    </table>
   );
 }
 

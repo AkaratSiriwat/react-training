@@ -18,6 +18,9 @@ function LayoutV2({ children }) {
             <Link to={"/animal"}>Animal</Link>
           </div>
           <div className="navbar-menu-item">
+            <Link to={"/product"}>Product</Link>
+          </div>
+          <div className="navbar-menu-item">
             <div onClick={() => navigate("/login")} to={"/login"}>
               Login
             </div>

@@ -7,6 +7,7 @@ import AboutEffect from "../pages/AboutEffect";
 import LayoutV2 from "../components/Layout/layoutV2";
 import Animal from "../pages/Animal";
 import AnimalDetail from "../pages/Animal/AnimalDetail";
+import Product from "../pages/Product/product";
 
 function Router() {
   return (
@@ -58,6 +59,14 @@ function Router() {
         element={
           <LayoutV2>
             <AnimalDetail />
+          </LayoutV2>
+        }
+      />
+      <Route
+        path="/product"
+        element={
+          <LayoutV2>
+            <Product />
           </LayoutV2>
         }
       />
